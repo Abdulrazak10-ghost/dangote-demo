@@ -1,0 +1,530 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+}
+
+.slide.active {
+  left: 0;
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+ 
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  background: #5e5c5c;
+  border-radius: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+  background: #000; /* yellow highlight */
+}
+
+@media (max-width: 768px){
+    .carousel{
+        height: 70vh;
+        
+    }
+    .overlay h1{
+        font-size: 2em;
+    }
+    .overlay p{
+        font-size: 0.8em;
+    }
+    .dot{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 468px){
+    .carousel{
+        height: 50vh;
+        
+    }
+    .overlay h1{
+        font-size: 1.5em;
+    }
+    .overlay p{
+        font-size: 0.6em;
+    }
+    .dot{
+        width: 7px;
+        height: 7px;
+    }
+}
+
+/* Refinery Section */
+.refinery-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.refinery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.refinery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.refinery-section .intro {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.refinery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.refinery-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.refinery-card:hover {
+  transform: translateY(-10px);
+}
+
+.refinery-icon {
+  font-size: 3rem;
+  color: rgb(11, 11, 88); /* Yellow */
+  margin-bottom: 1rem;
+}
+
+.refinery-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.refinery-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .refinery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .refinery-section h2 {
+    font-size: 1.5rem;
+  }
+  .refinery-card p{
+    font-size: 0.8em;
+  }
+  .refinery-grid {
+    grid-template-columns: 1fr;
+  }
+  .refinery-icon {
+  font-size: 1.5rem;
+  color: rgb(11, 11, 88); /* Yellow */
+  margin-bottom: 4px;
+}
+}
+/* Animation Base */
+/* Animation Base */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Innovation Section */
+.innovation-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.innovation-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.innovation-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.innovation-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+}
+
+.innovation-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.innovation-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Base animation */
+.animate {
+  opacity: 0;
+  transition: all 0.9s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+}
+
+/* Slide-in left/right */
+.slide-left {
+  transform: translateX(-80px);
+}
+.slide-right {
+  transform: translateX(80px);
+}
+
+.animate.visible.slide-left,
+.animate.visible.slide-right {
+  transform: translateX(0);
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 1024px) {
+  .innovation-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .innovation-text h2 {
+    font-size: 1.8rem;
+  }
+  .innovation-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .innovation-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2.5rem 1.2rem;
+  }
+
+  .innovation-text,
+  .innovation-image {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .innovation-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .innovation-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .innovation-section {
+    padding: 2rem 1rem;
+  }
+
+  .innovation-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .innovation-text p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .innovation-image img {
+    border-radius: 8px;
+  }
+}
+
+/* =============== SCROLL REVEAL ANIMATIONS =============== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up {
+  transform: translateY(40px);
+}
+.fade-up.active {
+  transform: translateY(0);
+}
+
+.slide-left {
+  transform: translateX(-60px);
+}
+.slide-left.active {
+  transform: translateX(0);
+}
+
+.slide-right {
+  transform: translateX(60px);
+}
+.slide-right.active {
+  transform: translateX(0);
+}
+
+/* ============ Economic Impact ============ */
+.impact-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+.impact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.impact-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+.impact-icon {
+  font-size: 2.5rem;
+  color: rgb(11, 11, 88);
+  margin-bottom: 1rem;
+}
+
+/* ============ Sustainability ============ */
+.sustainability-section {
+  padding: 4rem 2rem;
+  background: #eef9f2;
+  text-align: center;
+}
+.sustainability-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a4d2e;
+}
+.sustainability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sustainability-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.sustainability-card:hover {
+  transform: translateY(-5px);
+}
+.sustainability-icon {
+  font-size: 2.5rem;
+  color: #2d6a4f;
+  margin-bottom: 1rem;
+}
+
+/* ============ Partnerships ============ */
+.partnership-section {
+  padding: 4rem 2rem;
+  background: #f0f7ff;
+  text-align: center;
+}
+.partnership-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #003566;
+}
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.partnership-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.partnership-card:hover {
+  transform: translateY(-5px);
+}
+.partnership-icon {
+  font-size: 2.5rem;
+  color: rgb(11, 11, 88);
+  margin-bottom: 1rem;
+}
+
+/* ============ Testimonials ============ */
+.testimonial-section {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+.testimonial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+.quote-icon {
+  font-size: 2rem;
+  color: rgb(11, 11, 88);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.testimonial-card p {
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+.testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 992px) {
+  .impact-grid,
+  .sustainability-grid,
+  .partnership-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .impact-grid,
+  .sustainability-grid,
+  .partnership-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-section h2,
+  .sustainability-section h2,
+  .partnership-section h2,
+  .testimonial-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+

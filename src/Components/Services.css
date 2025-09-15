@@ -1,0 +1,335 @@
+/* ========= General Animations ========= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-in-out;
+}
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========= Hero Section ========= */
+.services-hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  max-width: 900px;
+}
+.services-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.services-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ========= Core Services ========= */
+.core-services {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.core-services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: rgb(10, 10, 95);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background: #f5f7fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.service-card .icon {
+  font-size: 2rem;
+  color: rgb(10, 10, 95);
+  margin-bottom: 1rem;
+}
+
+/* ========= Industrial Applications ========= */
+.applications {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+.applications h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: rgb(10, 10, 95);
+}
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.app-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.app-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+}
+.app-card .icon {
+  font-size: 2rem;
+  color: rgb(10, 10, 95);
+  margin-bottom: 1rem;
+}
+
+/* ========= Infrastructure ========= */
+.infrastructure {
+  padding: 4rem 2rem;
+
+}
+.infrastructure h2 {
+  font-size: 2.2rem;
+  color: rgb(10, 10, 95);
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.infra-content {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+.infra-content ul {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.infra-content li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 20px;
+}
+.infra-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: rgb(10, 10, 95);
+}
+
+/* ========= Sustainability ========= */
+.sustainability {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+.sustainability h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: rgb(10, 10, 95);
+}
+.sustainability-content {
+  max-width: 800px;
+  margin: auto;
+}
+.sustainability .big {
+  font-size: 3rem;
+  color: rgb(10, 10, 95);
+  margin-bottom: 1rem;
+}
+
+/* ========= Global Distribution ========= */
+.global-distribution {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.global-distribution h2 {
+  font-size: 2.2rem;
+  color: rgb(10, 10, 95);
+  margin-bottom: 1rem;
+}
+.global-distribution p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* ========= Quality ========= */
+.quality {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+.quality h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: rgb(10, 10, 95);
+}
+.quality-content {
+  max-width: 800px;
+  margin: auto;
+}
+.quality .big {
+  font-size: 3rem;
+  color: rgb(10, 10, 95);
+  margin-bottom: 1rem;
+}
+
+/* ========= Partners ========= */
+.partners {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.partners h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: rgb(10, 10, 95);
+}
+.partners-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+  gap: 2rem;
+  justify-items: center;
+}
+.partners-logos img {
+  width: 180px;
+  height: 100px;
+  object-fit: contain;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+.partners-logos img:hover {
+  transform: scale(1.08);
+}
+
+/* ========= CTA ========= */
+.cta-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgb(10, 10, 95);
+  color: white;
+}
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.cta-btn {
+  background: white;
+  color: rgb(10, 10, 95);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-weight: bold;
+  margin-top: 20px;
+ 
+}
+.cta-btn:hover {
+  background: #d3d627;
+}
+.cta-btn a{
+     text-decoration: none;
+}
+/* ========= Responsive ========= */
+@media (max-width: 992px) {
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+  .partners-logos img {
+    width: 150px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    height: 50vh;
+  }
+  .services-hero h1 {
+    font-size: 1.8rem;
+  }
+  .services-hero p {
+    font-size: 1rem;
+  }
+
+  .partners-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; /* reduced gap */
+  }
+  .partners-logos img {
+    width: 110px;
+    height: 65px;
+  }
+}
+
+/* Smallest phones */
+@media (max-width: 480px) {
+  .services-hero h1 {
+    font-size: 1.4rem;
+  }
+  .services-hero p {
+    font-size: 0.9rem;
+  }
+
+  .partners-logos {
+    gap: 0.5rem; /* very tight spacing */
+  }
+  .partners-logos img {
+    width: 90px;
+    height: 55px;
+  }
+}
+
+/* ===============================
+   TYPOGRAPHY + ICONS MEDIA QUERY
+   =============================== */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 1.6rem;
+  }
+  .service-card .icon,
+  .app-card .icon {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .services-section h2 {
+    font-size: 1.3rem;
+  }
+  .service-card .icon,
+  .app-card .icon {
+    font-size: 1.3rem;
+  }
+}
